@@ -9,10 +9,11 @@ Esta primera versión es **solo interfaz**: todas las pantallas del diseño, nav
 Requisitos: Flutter 3.22 o superior.
 
 ```bash
-git clone https://github.com/all-f0-ru/miboda-app.git
-cd miboda-app
+git clone https://github.com/all-f0-ru/MiBoda-app.git
+cd MiBoda-app
 flutter create . --org cl.miboda --project-name miboda_app   # genera android/ e ios/ la primera vez
 flutter pub get
+dart run flutter_launcher_icons   # instala el ícono de la app (corazón +)
 flutter run
 ```
 
@@ -38,6 +39,18 @@ flutter run
 - Panel con métricas, solicitudes por estado, detalle de solicitud, crear cotización por paquete, calendario editable (disponible / reservado / bloqueado) y respuesta a reseñas.
 
 **Estados**: carga, vacío (mensajes, resultados), error de login y sin conexión (`Routes.offline`).
+
+## Ícono de la app
+
+Corazón formado por dos arcos (como dos anillos que se juntan) y el "+" de la marca, en bronce. Archivos en `assets/icon/`:
+
+| Archivo | Uso |
+|---|---|
+| `app_icon.svg` / `.png` | Ícono principal, fondo crema (iOS, Android, web) |
+| `app_icon_dark.svg` / `.png` | Variante fondo tinta (modo oscuro, splash, redes) |
+| `app_icon_foreground.svg` / `.png` | Capa frontal del ícono adaptable de Android (sin fondo) |
+
+Los PNG son de 1024 × 1024. El logo grande dentro de la app sigue siendo el símbolo de anillos con gemas.
 
 ## Estructura
 
